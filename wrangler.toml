@@ -1,8 +1,2 @@
-name = "hedge-end-lacemakers"
-account_id = "f9f62053eee17d952677a658532234a5"
-compatibility_date = "2026-03-28"
-
-# Deploy with:
-# CLOUDFLARE_API_TOKEN=xxx npx wrangler pages deploy dist --project-name=hedge-end-lacemakers
-
-[vars]
+# This file is not used by Cloudflare Pages automatic builds
+# Pages uses dashboard settings instead
