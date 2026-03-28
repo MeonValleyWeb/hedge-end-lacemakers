@@ -1,41 +1,42 @@
 # Hedge End Bobbin Lacemakers
 
-Welcome to the Hedge End Bobbin Lacemakers website — built with Astro.
+## Deployment
 
-## 🚀 Getting Started
+### Manual Deploy (Recommended for now)
+
+1. Build the site:
+```bash
+npm run build
+```
+
+2. Deploy to Cloudflare Pages (requires token):
+```bash
+export CLOUDFLARE_API_TOKEN="your-token-here"
+npx wrangler pages deploy dist --project-name=hedge-end-lacemakers
+```
+
+Or use the deploy script:
+```bash
+./deploy.sh
+```
+
+### Project Details
+
+- **Project Name:** hedge-end-lacemakers
+- **Account:** Meon Valley Web
+- **URL:** https://hedge-end-lacemakers.pages.dev
+
+## Development
 
 ```bash
 npm install
 npm run dev
 ```
 
-## 📁 Project Structure
-
-```
-/
-├── src/
-│   ├── layouts/          # Base layouts
-│   ├── pages/            # Page components
-│   └── components/       # Reusable components
-├── public/               # Static assets
-└── package.json
-```
-
-## 🛠️ Build
+## Build
 
 ```bash
 npm run build
 ```
 
-## 🌐 Deployment
-
-This site is built for static hosting and can be deployed to:
-- Netlify
-- Vercel  
-- Cloudflare Pages
-- GitHub Pages
-- Any static web host
-
-## 📧 Contact
-
-For enquiries: hedgeendlace@gmail.com
+Output goes to `dist/` folder.

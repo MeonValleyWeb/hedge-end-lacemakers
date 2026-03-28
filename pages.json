@@ -1,0 +1,5 @@
+{
+  "name": "hedge-end-lacemakers",
+  "build_output_directory": "dist",
+  "production_branch": "main"
+}
