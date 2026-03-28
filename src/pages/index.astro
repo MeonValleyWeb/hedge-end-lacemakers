@@ -1,0 +1,306 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const upcomingEvent = {
+  title: "Our 1st Lace Day",
+  date: "Saturday 25th April 2026",
+  time: "10:00 AM - 4:00 PM",
+  location: "Hedge End",
+  charity: "Hampshire & Isle of Wight Air Ambulance",
+  ticketPrice: "From £7.50",
+  ticketLink: "https://www.ticketsource.co.uk/hedgeend1stlaceday/hedge-end-bobbin-lacemakers-1st-lace-day/2026-04-25/10:00/t-qjolreq"
+};
+
+const classInfo = {
+  tuesday: {
+    day: "Tuesday",
+    time: "Morning",
+    location: "Boorley Green"
+  },
+  thursday: {
+    day: "Thursday", 
+    time: "Evening",
+    location: "Botley"
+  }
+};
+---
+
+<Layout title="Welcome" description="Join Hedge End Bobbin Lacemakers to explore the art of bobbin lace-making in a vibrant community. Experience hands-on workshops and unleash your creativity!">
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-lace-100 via-cream-100 to-lace-200 py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 bg-lace-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <span class="flex h-2 w-2 bg-white rounded-full animate-pulse"></span>
+            Now Accepting New Members
+          </div>
+          <h1 class="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight mb-6">
+            Discover the Art of <span class="text-lace-600">Bobbin Lace</span> Making
+          </h1>
+          <p class="text-lg lg:text-xl text-gray-600 leading-relaxed mb-8 max-w-xl">
+            Join Hedge End Bobbin Lacemakers and become part of a vibrant community. 
+            Whether you're a complete beginner or experienced lacemaker, our welcoming 
+            classes will help you create beautiful lace pieces.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/what-we-do" class="inline-flex items-center gap-2 bg-lace-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-lace-700 transition-colors">
+              Explore Classes
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
+            <a href="/contact" class="inline-flex items-center gap-2 bg-white text-gray-700 border-2 border-gray-200 px-6 py-3 rounded-lg font-medium hover:border-lace-400 hover:text-lace-600 transition-colors">
+              Get in Touch
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-square rounded-2xl overflow-hidden shadow-2xl bg-white">
+            <div class="w-full h-full bg-gradient-to-br from-lace-200 to-lace-400 flex items-center justify-center">
+              <svg class="w-32 h-32 text-lace-700 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-lg p-4 max-w-xs">
+            <div class="flex items-center gap-3">
+              <div class="bg-green-100 rounded-full p-2">
+                <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900">All Skill Levels</p>
+                <p class="text-sm text-gray-500">Beginners welcome!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lace Day Event Section -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-br from-lace-600 to-lace-800 rounded-3xl overflow-hidden shadow-2xl">
+        <div class="grid lg:grid-cols-2">
+          <div class="p-8 lg:p-12 text-white">
+            <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+              </svg>
+              Save the Date!
+            </div>
+            <h2 class="font-serif text-3xl lg:text-4xl font-bold mb-4">{upcomingEvent.title}</h2>
+            <p class="text-xl text-lace-100 mb-2">{upcomingEvent.date}</p>
+            <p class="text-lace-200 mb-6">Bring your lace pillow, a mug, and enjoy meeting like-minded lacemakers</p>
+            
+            <div class="space-y-3 mb-8">
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-lace-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+                <span>Suppliers in attendance</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-lace-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
+                </svg>
+                <span>Guest Speaker</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-lace-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+                <span>Charity: {upcomingEvent.charity}</span>
+              </div>
+            </div>
+            
+            <a href={upcomingEvent.ticketLink} target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-white text-lace-700 px-6 py-3 rounded-lg font-semibold hover:bg-lace-50 transition-colors">
+              Buy Tickets — {upcomingEvent.ticketPrice}
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+              </svg>
+            </a>
+            <p class="text-sm text-lace-300 mt-4">
+              Or call Ticket Source: <a href="tel:03336663366" class="underline hover:text-white">0333 666 3366</a>
+            </p>
+          </div>
+          <div class="relative h-64 lg:h-auto bg-lace-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-lace-800 to-transparent lg:bg-gradient-to-l"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="text-center text-white p-8">
+                <div class="text-6xl mb-4">☕🧵</div>
+                <p class="text-lg font-medium">Coffee, Cake & Lace</p>
+                <p class="text-lace-300">An afternoon of creativity and community</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Classes Section -->
+  <section class="py-16 lg:py-24 bg-cream-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-serif text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Join Our Classes</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Learn from our amazing tutor Amanda! We offer classes for beginners to advanced lacemakers 
+          in a friendly, supportive environment.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Tuesday Class -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-14 h-14 bg-lace-100 rounded-full flex items-center justify-center">
+              <svg class="w-7 h-7 text-lace-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-serif text-xl font-semibold text-gray-900">{classInfo.tuesday.day} Mornings</h3>
+              <p class="text-lace-600">{classInfo.tuesday.location}</p>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-6">
+            Perfect for early birds! Start your day with creativity and learn new techniques 
+            in a relaxed morning setting.
+          </p>
+          <ul class="space-y-2 text-sm text-gray-600 mb-6">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              All skill levels welcome
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Beginner-friendly patterns
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Equipment available to borrow
+            </li>
+          </ul>
+          <a href="/contact" class="inline-flex items-center gap-2 text-lace-600 font-medium hover:text-lace-700">
+            Enquire about Tuesday classes
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Thursday Class -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-14 h-14 bg-lace-100 rounded-full flex items-center justify-center">
+              <svg class="w-7 h-7 text-lace-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-serif text-xl font-semibold text-gray-900">{classInfo.thursday.day} Evenings</h3>
+              <p class="text-lace-600">{classInfo.thursday.location}</p>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-6">
+            Prefer evening creativity? Unwind after work with our Thursday evening sessions. 
+            Perfect for those with daytime commitments.
+          </p>
+          <ul class="space-y-2 text-sm text-gray-600 mb-6">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              All skill levels welcome
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Advanced techniques available
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Equipment available to borrow
+            </li>
+          </ul>
+          <a href="/contact" class="inline-flex items-center gap-2 text-lace-600 font-medium hover:text-lace-700">
+            Enquire about Thursday classes
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="/what-we-do" class="inline-flex items-center gap-2 bg-lace-600 text-white px-8 py-4 rounded-lg font-medium hover:bg-lace-700 transition-colors">
+          Learn More About Our Classes
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Preview -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-serif text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Lace Class Gallery</h2>
+        <p class="text-lg text-gray-600">Beautiful work from our talented members</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {[1, 2, 3, 4].map((i) => (
+          <div class="aspect-square rounded-xl overflow-hidden bg-gradient-to-br from-lace-200 to-lace-300 flex items-center justify-center group cursor-pointer hover:shadow-lg transition-all">
+            <div class="text-center p-4">
+              <div class="text-4xl mb-2">🧵</div>
+              <p class="text-sm text-lace-700 font-medium">Lace Sample {i}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-8 text-center">
+        <p class="text-sm text-gray-500 italic">Gallery coming soon — check back for photos of our members' beautiful work!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 lg:py-24 bg-lace-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-serif text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Start Your Lace Journey?</h2>
+      <p class="text-lg text-lace-200 mb-8 max-w-2xl mx-auto">
+        Whether you're curious about bobbin lace or looking to join a friendly community, 
+        we'd love to hear from you. Get in touch today!
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/contact" class="inline-flex items-center gap-2 bg-white text-lace-900 px-8 py-4 rounded-lg font-semibold hover:bg-lace-50 transition-colors">
+          Contact Us
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+        <a href="mailto:hedgeendlace@gmail.com" class="inline-flex items-center gap-2 bg-transparent text-white border-2 border-white/30 px-8 py-4 rounded-lg font-medium hover:bg-white/10 transition-colors">
+          Email Direct
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

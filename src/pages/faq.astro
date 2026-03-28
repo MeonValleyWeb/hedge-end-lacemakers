@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const faqs = [
+  {
+    question: "How long is your course?",
+    answer: "There is ongoing learning from one term to the next. However, if you wish to just do a 'course' we can arrange this too. Our regular classes run throughout the year, and students progress at their own pace."
+  },
+  {
+    question: "What sort of equipment do I need to get started?",
+    answer: "You will need a lace pillow, bobbins, pins, thread, card and some other items which can usually be found around the house. Don't worry about buying everything at once — we can advise you on what to get and when."
+  },
+  {
+    question: "Where do I get this equipment?",
+    answer: "Our tutor Amanda can provide some equipment for you to borrow until you have decided that you enjoy the craft and wish to buy your own. There are some items of equipment which you will need to buy, and we can advise on this. See our <a href='/suppliers' class='text-lace-600 hover:underline'>Lace Suppliers</a> page for recommended suppliers."
+  },
+  {
+    question: "How long does it take to learn the basic stitches?",
+    answer: "Not very long really! It is a bit like knitting — there are 2 stitches, cloth stitch and half stitch, plus a twist. EVERYTHING else is made up of these 2 stitches. Most students learn these 2 stitches in the first 2 weeks of the term."
+  },
+  {
+    question: "Do I need any prior experience?",
+    answer: "Not at all! We welcome complete beginners. Our classes are designed to take you from absolute novice to confident lacemaker. We also welcome experienced lacemakers who want to join our community."
+  },
+  {
+    question: "How much do classes cost?",
+    answer: "Please <a href='/contact' class='text-lace-600 hover:underline'>contact us</a> for current pricing. We aim to keep our classes affordable and accessible to everyone."
+  },
+  {
+    question: "Can I try a class before committing?",
+    answer: "Absolutely! We encourage prospective students to come along and try a session. It's the best way to see if bobbin lace is for you and to meet our friendly group."
+  }
+];
+
+const siteRules = [
+  "Please be nice — we're a friendly community!",
+  "No offensive content or behaviour",
+  "No spreading of any copyrighted material",
+  "Admin decisions are final",
+  "No spamming or unauthorised advertising"
+];
+---
+
+<Layout title="Site Rules & FAQs" description="Frequently asked questions about Hedge End Bobbin Lacemakers. Find answers about classes, equipment, and more.">
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-lace-600 to-lace-800 py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="font-serif text-4xl lg:text-5xl font-bold text-white mb-4">Site Rules & FAQs</h1>
+      <p class="text-xl text-lace-200 max-w-2xl mx-auto">
+        Everything you need to know about joining our community
+      </p>
+    </div>
+  </section>
+
+  <!-- Site Rules -->
+  <section class="py-12 lg:py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-serif text-2xl font-bold text-gray-900 mb-8 text-center">Site Rules</h2>
+      <div class="bg-cream-100 rounded-2xl p-8">
+        <ul class="space-y-4">
+          {siteRules.map(rule => (
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-lace-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span class="text-gray-700">{rule}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="py-12 lg:py-16 bg-cream-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-serif text-2xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+      
+      <div class="space-y-6">
+        {faqs.map((faq, index) => (
+          <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+            <details class="group">
+              <summary class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-gray-50 transition-colors list-none">
+                <span class="font-semibold text-gray-900">{faq.question}</span>
+                <svg class="w-5 h-5 text-lace-600 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-6 pb-4">
+                <p class="text-gray-600 leading-relaxed" set:html={faq.answer} />
+              </div>
+            </details>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Still Have Questions -->
+  <section class="py-12 lg:py-16 bg-lace-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-serif text-2xl lg:text-3xl font-bold text-white mb-4">Still Have Questions?</h2>
+      <p class="text-lace-200 mb-6">Don't see your question here? Get in touch and we'll be happy to help.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/contact" class="inline-flex items-center gap-2 bg-white text-lace-900 px-6 py-3 rounded-lg font-semibold hover:bg-lace-50 transition-colors">
+          Contact Us
+        </a>
+        <a href="mailto:hedgeendlace@gmail.com" class="inline-flex items-center gap-2 bg-transparent text-white border-2 border-white/30 px-6 py-3 rounded-lg font-medium hover:bg-white/10 transition-colors">
+          Email Direct
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
